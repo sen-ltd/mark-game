@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark — subtract one or halve: an aperiodic subtraction game, solved in binary</title>
+    <meta
+      name="description"
+      content="Fraenkel's game Mark (subtract 1 or halve, rounding down) and its misère, round-up and base-t variants against an exact solver. P-positions are the numbers whose binary representation ends in an odd number of zeros; every checkable statement of Aperiodic Subtraction Games (EJC 2011) is recomputed by exhaustive search."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23141518'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='%23d9b45a'%3E10%3C/text%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Mark <span>subtract one, or halve</span></h1>
+        <p class="sub">
+          A number n. On your turn, replace it by <strong>n − 1</strong> or by <strong>⌊n/2⌋</strong>. Whoever moves to 0
+          wins. Fraenkel (2011): you are lost <strong>exactly when n written in binary ends in an odd number of 0s</strong>
+          (a <em>dopey</em> number; the others are <em>vile</em>). The Grundy value is just as simple — 1 on vile numbers with an
+          odd number of 1s, 2 on those with an even number — so sums of games are solved too. <em>Mark-t</em> subtracts
+          1…t−1 or divides by t (same rule in base t), <em>MiMark</em> is the misère game, <em>UpMark</em> rounds the half up.
+          Although every move only subtracts, the P-positions are <strong>not periodic</strong>.
+        </p>
+      </header>
+
+      <div id="wrap">
+        <div class="stage">
+          <h3>play <span class="dim">against the solver</span></h3>
+          <div class="panel">
+            <div class="controls">
+              <label class="sel">rules <select id="rule">
+                <option value="mark">Mark-t (normal play)</option>
+                <option value="mimark">MiMark-t (misère: last mover loses)</option>
+                <option value="upmark">UpMark (halve rounding up, 1 ends)</option>
+              </select></label>
+              <label class="sel">t <select id="tSel"><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+              <label class="sel">games <select id="kSel"><option>1</option><option selected>2</option><option>3</option></select></label>
+              <button id="random">New position</button>
+              <label class="sel">n = <input id="custom" placeholder="e.g. 1000" inputmode="numeric" /></label>
+              <label class="sel chk"><input type="checkbox" id="hints" checked /> hints</label>
+              <label class="sel chk"><input type="checkbox" id="cpu" checked /> computer replies</label>
+            </div>
+            <div id="piles"></div>
+            <div class="controls after">
+              <button id="best">Show the winning move</button>
+              <button id="undo">Undo</button>
+            </div>
+            <div id="status" aria-live="polite"></div>
+          </div>
+
+          <h3>why <span class="dim">— read the answer off the base-t digits</span></h3>
+          <div class="panel" id="why"></div>
+
+          <h3>the word W = g(0) g(1) g(2) … <span class="dim" id="wordSub"></span></h3>
+          <div class="panel">
+            <canvas id="word" width="720" height="250"></canvas>
+            <div class="legend" id="legend"></div>
+            <div id="hover" class="dim"></div>
+            <p class="small dim">One row per 64 positions. Black = P-position. Click a cell to play that number.</p>
+          </div>
+
+          <h3>no period <span class="dim">— P-positions of Mark-t look regular, but every candidate period breaks</span></h3>
+          <div class="panel">
+            <canvas id="period" width="720" height="220"></canvas>
+            <p class="small dim" id="periodNote"></p>
+          </div>
+        </div>
+
+        <div class="side">
+          <h3>paper check <span class="dim" id="checkHead"></span></h3>
+          <div class="panel" id="checks"></div>
+          <h3>observations</h3>
+          <div class="panel" id="notes"></div>
+        </div>
+      </div>
+
+      <footer>
+        <a href="https://github.com/sen-ltd/mark-game">source</a> · MIT · <a href="https://sen.ltd/">SEN LLC</a>
+      </footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

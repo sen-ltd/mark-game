@@ -1,0 +1,223 @@
+{
+ "N": 16777216,
+ "NT": 4194304,
+ "seconds": 47.144576375,
+ "paper": "A. S. Fraenkel, Aperiodic subtraction games, Electron. J. Combin. 18(2) (2011) #P19",
+ "claims": [
+  {
+   "id": "tab-AB",
+   "source": "§2 table",
+   "claim": "The printed a_n, b_n (n = 0..23) are what recursions (1), (2) produce: a_n = mex{a_i, b_i : i < n}, b_n = 2a_n.",
+   "ok": true,
+   "result": "48/48 printed entries match"
+  },
+  {
+   "id": "prop1",
+   "source": "Proposition 1",
+   "claim": "A and B are complementary: every n ≥ 1 is in exactly one of them.",
+   "ok": true,
+   "result": "11,184,811 terms of A and 5,592,406 of B below 16,777,216; 0 collisions"
+  },
+  {
+   "id": "thm1",
+   "source": "Theorem 1",
+   "claim": "For Mark, P = B and N = A.",
+   "ok": true,
+   "result": "0 exceptions in 0 ≤ n < 16,777,216"
+  },
+  {
+   "id": "thm2",
+   "source": "Theorem 2",
+   "claim": "P-positions are exactly the dopey numbers (binary ends in an odd number of 0s), N-positions the vile ones.",
+   "ok": true,
+   "result": "0 exceptions in 1 ≤ n < 16,777,216; 5,592,405 P-positions = 33.333 % (→ 1/3)"
+  },
+  {
+   "id": "thm3",
+   "source": "Theorem 3",
+   "claim": "The elements of A alternate in spite (a₁ odious, a₂ evil, …); the same holds for B.",
+   "ok": true,
+   "result": "0 exceptions over all a_n, b_n < 16,777,216"
+  },
+  {
+   "id": "tab-g",
+   "source": "§3 table",
+   "claim": "The printed g(0..23) and W is a ternary word (g ≤ 2).",
+   "ok": true,
+   "result": "24/24 printed values match; max g = 2"
+  },
+  {
+   "id": "thm4-i",
+   "source": "Theorem 4 (i)",
+   "claim": "The 0s of W are dopey and alternate in spite.",
+   "ok": true,
+   "result": "0 exceptions among 5,592,405 zeros"
+  },
+  {
+   "id": "thm4-ii",
+   "source": "Theorem 4 (ii)",
+   "claim": "Every odious 0 is preceded by 1 and followed by 2; every evil 0 is preceded by 2 and followed by 1.",
+   "ok": true,
+   "result": "0 exceptions"
+  },
+  {
+   "id": "thm4-iii",
+   "source": "Theorem 4 (iii)",
+   "claim": "All 1s of W are odious, all 2s evil, and both are vile.",
+   "ok": true,
+   "result": "0 exceptions in 1 ≤ n < 16,777,216"
+  },
+  {
+   "id": "note3",
+   "source": "Note 3 / Note 4",
+   "claim": "Conversely every vile odious number has g = 1 and every vile evil number g = 2, so g is computed from the binary representation alone.",
+   "ok": true,
+   "result": "0 exceptions in 0 ≤ n < 16,777,216"
+  },
+  {
+   "id": "thm4-iv",
+   "source": "Theorem 4 (iv)",
+   "claim": "Between consecutive 0s only 010, 01210 (leading 0 evil) and 020, 02120 (leading 0 odious) occur.",
+   "ok": true,
+   "result": "0 exceptions; counts 02120 ×1,398,101, 010 ×1,398,101, 020 ×1,398,101, 01210 ×1,398,101"
+  },
+  {
+   "id": "thm4-v",
+   "source": "Theorem 4 (v)",
+   "claim": "At R(n) = 1^{2t−1}0 a subword 01210 or 02120 begins, at R(n) = 1^{2t}0 a subword 010 or 020; all four subwords appear infinitely often.",
+   "ok": true,
+   "result": "0 exceptions over 22 values of n; all four chains appear in [0, N/2) (4) and in [N/2, N) (4)"
+  },
+  {
+   "id": "epilogue",
+   "source": "§7 Epilogue",
+   "claim": "From 1000 the second player (Peter) wins, from 2000 the first (Nathan); 15 is an N-position and 15 → 14 wins.",
+   "ok": true,
+   "result": "1000 = 1111101000: P; 2000 = 11111010000: N; 15: N; 14: P"
+  },
+  {
+   "id": "tab-mis",
+   "source": "§4 table",
+   "claim": "The printed MiMark a_n, b_n (n = 0..23) are what recursion (1), (3) produces (b₀ = 1, b_n = 2a_n).",
+   "ok": true,
+   "result": "48/48 printed entries match"
+  },
+  {
+   "id": "thm5",
+   "source": "Theorem 5",
+   "claim": "For MiMark (misère Mark), P = B and N = A with B from (3).",
+   "ok": true,
+   "result": "0 exceptions in 0 ≤ n < 16,777,216"
+  },
+  {
+   "id": "thm6",
+   "source": "Theorem 6",
+   "claim": "MiMark P-positions are the dopey numbers with the powers of 2 swapped: 2^{2k} in, 2^{2k+1} out.",
+   "ok": true,
+   "result": "0 exceptions; misère and normal play differ at only 24 positions below 16,777,216 (the powers of 2)"
+  },
+  {
+   "id": "tab-up",
+   "source": "§5 table",
+   "claim": "The printed UpMark a_n, b_n (n = 0..23) are what recursion (1), (4) produces (b₀ = 1, b_n = 2a_n − 1).",
+   "ok": true,
+   "result": "48/48 printed entries match"
+  },
+  {
+   "id": "thm7",
+   "source": "Theorem 7",
+   "claim": "For UpMark, P = B and N = A with B from (4).",
+   "ok": true,
+   "result": "0 exceptions in 1 ≤ n < 16,777,216"
+  },
+  {
+   "id": "thm8-printed",
+   "source": "Theorem 8 (as printed)",
+   "claim": "B consists of 1 and the numbers whose binary representation ends in 1 0^{2k} 1 (k ≥ 1) or in 1 0 1^k (k > 1).",
+   "ok": false,
+   "result": "2,097,153 exceptions, all P-positions it misses (2,097,153 of 5,592,406): 3 = 11, 7 = 111, 15 = 1111, 19 = 10011, 31 = 11111, 35 = 100011, … — every n ≡ 3 (mod 4) whose final run of 1s is not preceded by \"10\""
+  },
+  {
+   "id": "thm8-proof",
+   "source": "Theorem 8 (proof's B′)",
+   "claim": "B consists of 1 and the numbers ending in 1 0^{2k} 1 (k ≥ 1) or in 1^k (k > 1) — the set B′ the proof actually works with.",
+   "ok": true,
+   "result": "0 exceptions in 1 ≤ n < 16,777,216: the theorem's \"10 1^k\" should read \"1^k\" (equivalently n ≡ 3 mod 4)"
+  },
+  {
+   "id": "thm8-A",
+   "source": "Theorem 8 (A)",
+   "claim": "A consists of the even numbers and the numbers ending in 1 0^{2k−1} 1.",
+   "ok": true,
+   "result": "0 exceptions in 2 ≤ n < 16,777,216"
+  },
+  {
+   "id": "thm8-spite",
+   "source": "Theorem 8 (spite)",
+   "claim": "The members of B alternate in spite: b_{2n} odious, b_{2n−1} evil.",
+   "ok": true,
+   "result": "0 exceptions over 5,592,405 terms"
+  },
+  {
+   "id": "cor1",
+   "source": "Corollary 1",
+   "claim": "(i) If 2t−1 ∈ P then 2t+1 ∈ P iff their spites differ; (ii) the spites agree iff R(2t−1) ends in 0 1^{2k}, and then 2t+3 ∈ P.",
+   "ok": true,
+   "result": "0 exceptions over all odd pairs below 16,777,216 (5,592,405 with 2t−1 ∈ P)"
+  },
+  {
+   "id": "mark-t",
+   "source": "§6",
+   "claim": "For Mark-t (subtract 1..t−1 or go to ⌊n/t⌋), P = B with b_n = t·a_n, and P = the dopey numbers in base t.",
+   "ok": true,
+   "result": "exceptions (recursion / base-t dopey) t=2: 0/0, t=3: 0/0, t=4: 0/0, t=5: 0/0, t=6: 0/0, t=7: 0/0, t=8: 0/0; N = 16,777,216 for t = 2, 4,194,304 for t ≥ 3"
+  },
+  {
+   "id": "tab-t4",
+   "source": "§6 table",
+   "claim": "The printed Mark-4 a_n, b_n (n = 0..23).",
+   "ok": true,
+   "result": "48/48 printed entries match"
+  },
+  {
+   "id": "thm9",
+   "source": "Theorem 9",
+   "claim": "Mark-t is aperiodic (finite check: no period r ≤ 4,096 holds on [M/4, M)).",
+   "ok": true,
+   "result": "t=2: worst first break 4096 after n0; t=3: worst first break 2642 after n0; t=4: worst first break 12288 after n0; t=5: worst first break 10799 after n0; t=6: worst first break 2264 after n0; t=7: worst first break 24671 after n0; t=8: worst first break 28672 after n0"
+  },
+  {
+   "id": "own-mis-t",
+   "source": "this repo (extends Thm 6)",
+   "claim": "Misère Mark-t for every t = 2..8: P = base-t dopey numbers with the powers of t swapped (t^{2k} in, t^{2k+1} out). §7 lists misère Mark-t as open.",
+   "ok": true,
+   "result": "exceptions t=2: 0 (differs from normal play at 24), t=3: 0 (differs from normal play at 14), t=4: 0 (differs from normal play at 11), t=5: 0 (differs from normal play at 10), t=6: 0 (differs from normal play at 9), t=7: 0 (differs from normal play at 8), t=8: 0 (differs from normal play at 8)"
+  },
+  {
+   "id": "own-unique",
+   "source": "this repo",
+   "claim": "In Mark-t (t = 2..8) every N-position has exactly one winning move: never both a subtraction and the division reach a P-position.",
+   "ok": true,
+   "result": "N-positions with exactly one winning move: t=2: 11,184,810/11,184,810, t=3: 3,145,727/3,145,727, t=4: 3,355,443/3,355,443, t=5: 3,495,252/3,495,252, t=6: 3,595,117/3,595,117, t=7: 3,670,014/3,670,014, t=8: 3,728,270/3,728,270"
+  },
+  {
+   "id": "own-density",
+   "source": "this repo",
+   "claim": "Mark-t: the P-density is exactly Σ_{j odd} (t−1)/t^{j+1} → 1/(t+1), and the Grundy values fill 0..t (each with frequency ≈ 1/(t+1)).",
+   "ok": true,
+   "result": "t=2: 33.33 % (1/(t+1) = 33.33 %), g ∈ 0..2; t=3: 25.00 % (1/(t+1) = 25.00 %), g ∈ 0..3; t=4: 20.00 % (1/(t+1) = 20.00 %), g ∈ 0..4; t=5: 16.67 % (1/(t+1) = 16.67 %), g ∈ 0..5; t=6: 14.29 % (1/(t+1) = 14.29 %), g ∈ 0..6; t=7: 12.50 % (1/(t+1) = 12.50 %), g ∈ 0..7; t=8: 11.11 % (1/(t+1) = 11.11 %), g ∈ 0..8"
+  }
+ ],
+ "notes": [
+  {
+   "id": "g-t",
+   "title": "Grundy values of Mark-t, t ≥ 3 (open in §7)",
+   "result": "For t = 2 the value of a vile n is its binary spite. t=3: not a function of the digit sum mod m for any m ≤ 2t+2; t=4: not a function of the digit sum mod m for any m ≤ 2t+2; t=5: not a function of the digit sum mod m for any m ≤ 2t+2. The g-function of Mark-t stays the paper's open problem."
+  },
+  {
+   "id": "words",
+   "title": "The words W for t = 2, 3, 4 (n = 0..39)",
+   "result": "t=2: 0102120102012102120121020102120102012102 · t=3: 0120320132130120132130230120130230123120 · t=4: 0123042301430124312401230143012431240324"
+  }
+ ]
+}
