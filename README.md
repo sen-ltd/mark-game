@@ -48,3 +48,10 @@ npm run build
 ## License
 
 MIT © 2026 SEN LLC
+
+<!-- sen-publish:links -->
+## Links
+
+- 🌐 Demo: https://sen.ltd/portfolio/mark-game/
+- 📝 記事: https://qiita.com/sen-ltd/items/1e784f40eb7b5b1c110b
+<!-- /sen-publish:links -->
